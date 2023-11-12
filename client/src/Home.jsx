@@ -55,58 +55,58 @@ const Home = () => {
     }
 
     return (
-        <div>
-            <div style={
-                {
-                    display: "flex",
-                    flexDirection: "column",
-                    alignItems: "center",
-                    justifyContent: "center",
-                    rowGap: "20px",
-                    height: "80vh"
-                }
-            }>
-                <h3>Add items in your inventory</h3>
-                <div style={{ display: "flex", flexDirection: "column", alignItems: "center", justifyContent: "center", rowGap: "20px" }}>
-                    <img style={{ height: "100px", width: "150px", borderRadius: "15px" }} src={url} alt="product" />
-                    <div style={{ display: "flex", justifyContent: "center", alignItems: "center" }}>
-                        <input type="file" accept="image/png,image/jpeg" onChange={(e) => setImageUpload(e.target.files[0])} />
-                        <p style={{ cursor: "pointer", display: "flex", fontSize: "14px", backgroundColor: "#f2f2f2", padding: "7px 15px", borderRadius: "10px" }} onClick={uploadFile}>Upload</p>
-                    </div>
-                    <div>
-                        <label style={{ margin: "10px" }}>Name</label>
-                        <input value={name} onChange={(e) => {
-                            setName(e.target.value)
-                        }} style={{ padding: "5px 7px", borderRadius: "10px" }} type="text" />
-                    </div>
-                    <div>
-                        <label style={{ margin: "10px" }}>Quantity</label>
-                        <input value={quantity} onChange={(e) => setQuantity(e.target.value)} style={{ padding: "5px 7px", borderRadius: "10px" }} type="number" />
-                    </div>
-                    <div>
-                        <label style={{ margin: "10px" }}>Type</label>
-                        <select
-                            style={{ padding: "5px 7px", borderRadius: "10px" }}
-                            defaultValue={"Free"}
-                            onChange={(e) => setType(e.target.value)}
-                        >
-                            <option value="Free">Free</option>
-                            <option value="Trade">Trade</option>
-                        </select>
-                    </div>
-                    <div>
-                        <label style={{ margin: "10px" }}>Location link</label>
-                        <input value={location} onChange={(e) => setLocation(e.target.value)} style={{ padding: "5px 7px", borderRadius: "10px" }} type="text" />
-                    </div>
-                    <div>
-                        <label style={{ margin: "10px" }}>Expiry</label>
-                        <input value={expiry} onChange={(e) => setExpiry(e.target.value)} style={{ padding: "5px 7px", borderRadius: "10px" }} type="date" />
-                    </div>
-                    <button onClick={handleAddFoodItem} style={{ backgroundColor: "#f2f2f2", outline: "none", border: "none", padding: "7px 15px", borderRadius: "10px", cursor: "pointer" }}>Add Item</button>
-                </div>
+        <div style={{
+          display: "flex",
+          flexDirection: "column",
+          alignItems: "center",
+          justifyContent: "center",
+          rowGap: "20px",
+          height: "80vh",
+          width: "500px", // Adjust the width as needed
+          padding: "20px",
+          borderRadius: "10px",
+          boxShadow: "0px 0px 10px 0px rgba(0,0,0,0.2)",
+          margin: "auto",
+          marginTop: "50px",
+        }}>
+          <h1 style={{alignItems: "center"}}>Add items in your inventory</h1>
+          <div style={{ display: "flex", flexDirection: "column", alignItems: "center", justifyContent: "center", rowGap: "20px" }}>
+            <img style={{ height: "100px", width: "150px", borderRadius: "15px" }} src={url} alt="product" />
+            <div style={{ display: "flex", justifyContent: "center", alignItems: "center" }}>
+              <input type="file" accept="image/png,image/jpeg" onChange={(e) => setImageUpload(e.target.files[0])} />
+              <p style={{ cursor: "pointer", display: "flex", fontSize: "14px", backgroundColor: "#f2f2f2", padding: "7px 15px", borderRadius: "10px" }} onClick={uploadFile}>Upload</p>
             </div>
+            <div>
+              <label style={{ margin: "10px", textAlign: "left" }}>Name</label>
+              <input value={name} onChange={(e) => setName(e.target.value)} style={{ padding: "5px 7px", borderRadius: "10px" }} type="text" />
+            </div>
+            <div>
+              <label style={{ margin: "10px", textAlign: "left" }}>Quantity</label>
+              <input value={quantity} onChange={(e) => setQuantity(e.target.value)} style={{ padding: "5px 7px", borderRadius: "10px" }} type="number" />
+            </div>
+            <div style={{ display: "flex", justifyContent: "space-between" }}>
+              <label style={{ margin: "10px", textAlign: "left" }}>Type</label>
+              <select
+                style={{ padding: "5px 7px", borderRadius: "10px" }}
+                defaultValue={"Free"}
+                onChange={(e) => setType(e.target.value)}
+              >
+                <option value="Free">Free</option>
+                <option value="Trade">Trade</option>
+              </select>
+            </div>
+            <div>
+              <label style={{ margin: "10px", textAlign: "left" }}>Location link</label>
+              <input value={location} onChange={(e) => setLocation(e.target.value)} style={{ padding: "5px 7px", borderRadius: "10px" }} type="text" />
+            </div>
+            <div>
+              <label style={{ margin: "10px", textAlign: "left" }}>Expiry</label>
+              <input value={expiry} onChange={(e) => setExpiry(e.target.value)} style={{ padding: "5px 7px", borderRadius: "10px" }} type="date" />
+            </div>
+            <button onClick={handleAddFoodItem} style={{ backgroundColor: "#f2f2f2", outline: "none", border: "none", padding: "7px 15px", borderRadius: "10px", cursor: "pointer" }}>Add Item</button>
+          </div>
         </div>
-    );
+      );
 
 }
 

@@ -1,4 +1,5 @@
 li {
+    cursor: pointer;
     list-style: none;
     padding: 5px 10px;
     background-color: #f2f2f2;
